@@ -1,6 +1,6 @@
 <?php
 
-namespace Grimthorr\LaravelUserSettings;
+namespace Katalis\LaravelUserSettings;
 
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider {
@@ -35,7 +35,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
      */
     public function register()
     {
-        $this->app->singleton('setting', 'Grimthorr\LaravelUserSettings\Setting');
+        $this->app->singleton('setting', 'Katalis\LaravelUserSettings\Setting');
 
         $this->mergeConfigFrom(
             __DIR__.'/../config/config.php', 'laravel-user-settings'

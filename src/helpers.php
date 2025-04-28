@@ -15,7 +15,7 @@ if (!function_exists('setting'))
         $instance = app('setting');
 
         if (!isset($instance)) {
-            $instance = app()->make('Grimthorr\LaravelUserSettings\Setting');
+            $instance = app()->make('Katalis\LaravelUserSettings\Setting');
         }
 
         if (isset($key)) {

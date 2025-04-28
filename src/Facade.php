@@ -1,6 +1,6 @@
 <?php
 
-namespace Grimthorr\LaravelUserSettings;
+namespace Katalis\LaravelUserSettings;
 
 
 class Facade extends \Illuminate\Support\Facades\Facade {
