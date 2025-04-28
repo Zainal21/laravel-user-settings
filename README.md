@@ -11,31 +11,31 @@ Simple user settings facade for Laravel 5. Settings are stored as JSON in a sing
 ## Installation
 
 1. Run `composer require grimthorr/laravel-user-settings` to include this in your project.
-2. Add `'Katalis\LaravelUserSettings\ServiceProvider'` to `providers` in `config/app.php`.
+2. Add `'KatalisKreasi\LaravelUserSettings\ServiceProvider'` to `providers` in `config/app.php`.
 
 ```php
 'providers' => array(
   // ...
-  'Katalis\LaravelUserSettings\ServiceProvider',
+  'KatalisKreasi\LaravelUserSettings\ServiceProvider',
 ),
 ```
 
-3. Add `'Setting' => 'Katalis\LaravelUserSettings\Facade'` to `aliases` in `config/app.php`.
+3. Add `'Setting' => 'KatalisKreasi\LaravelUserSettings\Facade'` to `aliases` in `config/app.php`.
 
 ```php
 'aliases' => array(
   // ...
-  'Setting' => 'Katalis\LaravelUserSettings\Facade',
+  'Setting' => 'KatalisKreasi\LaravelUserSettings\Facade',
 ),
 ```
 
-4. Run `php artisan vendor:publish --provider="Katalis\LaravelUserSettings\ServiceProvider" --tag="config"` to publish the config file.
+4. Run `php artisan vendor:publish --provider="KatalisKreasi\LaravelUserSettings\ServiceProvider" --tag="config"` to publish the config file.
 5. Modify the published configuration file located at `config/laravel-user-settings.php` to your liking.
-6. Create a varchar (string) column in a table on your database to match the config file in step 5. Alternatively, use the Laravel migration included in this package to automatically create a `settings` column in the `users` table: `php artisan vendor:publish --provider="Katalis\LaravelUserSettings\ServiceProvider" --tag="migrations" && php artisan migrate`.
+6. Create a varchar (string) column in a table on your database to match the config file in step 5. Alternatively, use the Laravel migration included in this package to automatically create a `settings` column in the `users` table: `php artisan vendor:publish --provider="KatalisKreasi\LaravelUserSettings\ServiceProvider" --tag="migrations" && php artisan migrate`.
 
 ## Configuration
 
-Pop open `config/laravel-user-settings.php` to adjust package configuration. If this file doesn't exist, run `php artisan vendor:publish --provider="Katalis\LaravelUserSettings\ServiceProvider" --tag="config"` to create the default configuration file.
+Pop open `config/laravel-user-settings.php` to adjust package configuration. If this file doesn't exist, run `php artisan vendor:publish --provider="KatalisKreasi\LaravelUserSettings\ServiceProvider" --tag="config"` to create the default configuration file.
 
 ```php
 return array(

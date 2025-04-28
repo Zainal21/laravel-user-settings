@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Katalis\\LaravelUserSettings\\": "src/"
+      "KatalisKreasi\\LaravelUserSettings\\": "src/"
     },
     "files": [
       "src/helpers.php"

@@ -15,7 +15,7 @@ if (!function_exists('setting'))
         $instance = app('setting');
 
         if (!isset($instance)) {
-            $instance = app()->make('Katalis\LaravelUserSettings\Setting');
+            $instance = app()->make('KatalisKreasi\LaravelUserSettings\Setting');
         }
 
         if (isset($key)) {

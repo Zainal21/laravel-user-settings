@@ -1,6 +1,6 @@
 <?php
 
-namespace Katalis\LaravelUserSettings;
+namespace KatalisKreasi\LaravelUserSettings;
 
 
 class Setting {
