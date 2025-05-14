@@ -1,7 +1,8 @@
 <?php
 
-if (!function_exists('setting'))
-{
+use Illuminate\Support\Arr;
+
+if (!function_exists('setting')) {
     /**
      * Helper function for Setting facade.
      *
@@ -23,5 +24,35 @@ if (!function_exists('setting'))
         }
 
         return app('setting');
+    }
+}
+
+if (!function_exists('array_get')) {
+    /**
+     * Get an item from an array using dot notation.
+     *
+     * @param array  $array
+     * @param string $key
+     * @param mixed  $default
+     * @return mixed
+     */
+    function array_get(array $array, $key, $default = null)
+    {
+        return Arr::get($array, $key, $default);
+    }
+}
+
+if (!function_exists('array_set')) {
+    /**
+     * Set an item on an array using dot notation.
+     *
+     * @param array  $array
+     * @param string $key
+     * @param mixed  $value
+     * @return array
+     */
+    function array_set(array &$array, $key, $value)
+    {
+        return Arr::set($array, $key, $value);
     }
 }
