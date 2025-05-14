@@ -27,17 +27,22 @@ if (!function_exists('setting')) {
     }
 }
 
+
 if (!function_exists('array_get')) {
     /**
      * Get an item from an array using dot notation.
      *
-     * @param array  $array
-     * @param string $key
-     * @param mixed  $default
+     * @param array|null $array
+     * @param string|null $key
+     * @param mixed $default
      * @return mixed
      */
-    function array_get(array $array = [], $key, $default = null)
+    function array_get($array = null, $key = null, $default = null)
     {
+        if (!is_array($array) || $key === null) {
+            return $default;
+        }
+
         return Arr::get($array, $key, $default);
     }
 }
@@ -46,13 +51,17 @@ if (!function_exists('array_set')) {
     /**
      * Set an item on an array using dot notation.
      *
-     * @param array  $array
-     * @param string $key
-     * @param mixed  $value
-     * @return array
+     * @param array|null $array
+     * @param string|null $key
+     * @param mixed $value
+     * @return array|null
      */
-    function array_set(array &$array = [], $key, $value)
+    function array_set(&$array = null, $key = null, $value = null)
     {
+        if (!is_array($array) || $key === null) {
+            return $array;
+        }
+
         return Arr::set($array, $key, $value);
     }
 }
