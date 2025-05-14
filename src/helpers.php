@@ -36,7 +36,7 @@ if (!function_exists('array_get')) {
      * @param mixed  $default
      * @return mixed
      */
-    function array_get(array $array, $key, $default = null)
+    function array_get(array $array = [], $key, $default = null)
     {
         return Arr::get($array, $key, $default);
     }
@@ -51,7 +51,7 @@ if (!function_exists('array_set')) {
      * @param mixed  $value
      * @return array
      */
-    function array_set(array &$array, $key, $value)
+    function array_set(array &$array = [], $key, $value)
     {
         return Arr::set($array, $key, $value);
     }
